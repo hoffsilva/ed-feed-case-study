@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CACC759E258393FC004E6BC6 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACC7594258393FC004E6BC6 /* EssentialFeed.framework */; };
 		CACC75B125839425004E6BC6 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC75B025839425004E6BC6 /* FeedItem.swift */; };
+		CACC75B7258394BD004E6BC6 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC75B6258394BD004E6BC6 /* FeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,7 @@
 		CACC759D258393FC004E6BC6 /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACC75A4258393FC004E6BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CACC75B025839425004E6BC6 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		CACC75B6258394BD004E6BC6 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			children = (
 				CACC7598258393FC004E6BC6 /* Info.plist */,
 				CACC75B025839425004E6BC6 /* FeedItem.swift */,
+				CACC75B6258394BD004E6BC6 /* FeedLoader.swift */,
 			);
 			path = EssentialFeed;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CACC75B7258394BD004E6BC6 /* FeedLoader.swift in Sources */,
 				CACC75B125839425004E6BC6 /* FeedItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
