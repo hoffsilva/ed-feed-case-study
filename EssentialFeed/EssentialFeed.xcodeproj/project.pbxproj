@@ -10,6 +10,7 @@
 		CACC759E258393FC004E6BC6 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACC7594258393FC004E6BC6 /* EssentialFeed.framework */; };
 		CACC75B125839425004E6BC6 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC75B025839425004E6BC6 /* FeedItem.swift */; };
 		CACC75B7258394BD004E6BC6 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC75B6258394BD004E6BC6 /* FeedLoader.swift */; };
+		CACC75BC2583984B004E6BC6 /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC75BB2583984B004E6BC6 /* RemoteFeedLoaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		CACC75A4258393FC004E6BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CACC75B025839425004E6BC6 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		CACC75B6258394BD004E6BC6 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
+		CACC75BB2583984B004E6BC6 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				CACC7598258393FC004E6BC6 /* Info.plist */,
-				CACC75B025839425004E6BC6 /* FeedItem.swift */,
-				CACC75B6258394BD004E6BC6 /* FeedLoader.swift */,
+				CACC75BA258397EC004E6BC6 /* Feed Feature */,
 			);
 			path = EssentialFeed;
 			sourceTree = "<group>";
@@ -82,8 +83,18 @@
 			isa = PBXGroup;
 			children = (
 				CACC75A4258393FC004E6BC6 /* Info.plist */,
+				CACC75BB2583984B004E6BC6 /* RemoteFeedLoaderTests.swift */,
 			);
 			path = EssentialFeedTests;
+			sourceTree = "<group>";
+		};
+		CACC75BA258397EC004E6BC6 /* Feed Feature */ = {
+			isa = PBXGroup;
+			children = (
+				CACC75B025839425004E6BC6 /* FeedItem.swift */,
+				CACC75B6258394BD004E6BC6 /* FeedLoader.swift */,
+			);
+			path = "Feed Feature";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 					};
 					CACC759C258393FC004E6BC6 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -203,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CACC75BC2583984B004E6BC6 /* RemoteFeedLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = C434CHPZ37;
@@ -404,6 +418,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.hoffsilva.EssentialFeedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -412,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = C434CHPZ37;
