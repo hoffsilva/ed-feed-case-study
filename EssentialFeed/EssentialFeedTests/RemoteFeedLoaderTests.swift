@@ -11,19 +11,19 @@ import EssentialFeed
 class RemoteFeedLoaderTests: XCTestCase {
 
     func test_init_doesNotRequestsDataFromURL() {
-        let client = createSUT(with: nil).client
-        XCTAssertNil(client.requestedURL)
+        let client = createSUT().client
+        XCTAssertTrue(client.requestedURLs.isEmpty)
     }
     
     func test_load_requestsDataFromURL() {
-        let url = URL(string: "www.google.com")
+        let url = URL(string: "www.google.com")!
         let (sut, client) = createSUT(with: url)
         sut.load()
-        XCTAssertEqual(client.requestedURL, url)
+        XCTAssertEqual(client.requestedURLs, [url])
     }
     
     func test_loadTwice_requestsDataFromURLTwice() {
-        let url = URL(string: "www.google.com")
+        let url = URL(string: "www.google.com")!
         let (sut, client) = createSUT(with: url)
         sut.load()
         sut.load()
@@ -32,18 +32,16 @@ class RemoteFeedLoaderTests: XCTestCase {
     
     // MARK: Helpers
     
-    private func createSUT(with url: URL? = URL(string: "www.google.com.br")) -> (sut: RemoteFeedLoader, client: HTTPClientSpy) {
+    private func createSUT(with url: URL = URL(string: "www.google.com.br")!) -> (sut: RemoteFeedLoader, client: HTTPClientSpy) {
         let client = HTTPClientSpy()
-        let sut = RemoteFeedLoader(url: url, client: client)
+        let sut = RemoteFeedLoader(url: url , client: client)
         return (sut, client)
     }
     
     private class HTTPClientSpy: HTTPClient {
-        var requestedURL: URL?
         var requestedURLs = [URL]()
         
         func get(from url: URL) {
-            requestedURL = url
             requestedURLs.append(url)
         }
         
